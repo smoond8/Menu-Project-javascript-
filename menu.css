@@ -1,0 +1,10 @@
+*{padding: 0px;margin: 0px;box-sizing: border-box;}
+body{background: #f3f3f3;}
+.main{width: 900px;margin: auto;}
+.our-menu{width: 100%;float: left;position: absolute;top: 20%;}
+.our-menu h3{text-transform: capitalize;font-size: 40px;text-align: center;}
+.button button{font-size: 20px;position: relative;left: 32%; padding:4px 18px;margin-right: 10px;top: 30px;
+    color: #b79d11;background: transparent;border-color: #b79d11;border-radius: 7px;text-transform: capitalize;}
+.button button:hover{color: white;background:#b79d11;}
+.content{width: 100%;float: left;}
+.pic{width:;}
