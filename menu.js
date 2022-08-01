@@ -92,6 +92,7 @@ const menuarr = [
     displayMenuItems(menuarr);
   })
 
+  
   all.addEventListener('click',(event)=>{
     displayMenuItems(menuarr)
   })
