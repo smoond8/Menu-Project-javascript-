@@ -1,10 +1,21 @@
 *{padding: 0px;margin: 0px;box-sizing: border-box;}
-body{background: #f3f3f3;}
-.main{width: 900px;margin: auto;}
-.our-menu{width: 100%;float: left;position: absolute;top: 20%;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+img{max-width: 100%;}
+body{background: #f3f3f3;font-family: 'Open Sans', sans-serif;}
+.main{width: 1200px;margin: auto;}
+.our-menu{width: 100%;float: left;padding-top: 6%;}
 .our-menu h3{text-transform: capitalize;font-size: 40px;text-align: center;}
 .button button{font-size: 20px;position: relative;left: 32%; padding:4px 18px;margin-right: 10px;top: 30px;
     color: #b79d11;background: transparent;border-color: #b79d11;border-radius: 7px;text-transform: capitalize;}
 .button button:hover{color: white;background:#b79d11;}
+.menu-item{padding-top: 5%;float: left;width: 100%;}
 .content{width: 100%;float: left;}
-.pic{width:;}
+.pic{width: 40%;float: left;}
+.content{width: 56%;float: right;}
+.left-item{width: 50%;float: left;padding-left: 30px;padding-right: 30px;padding-bottom: 25px;}
+.pic img{border: 3px solid #b79d11;border-radius: 9px;height: 175px;width: 100%;}
+.content header{display: flex;border-bottom: 0.5px dotted;justify-content: space-between;}
+.content h3.item{display: inline-block;text-transform: capitalize;padding-bottom: 10px;}
+.content h3.price{display: inline-block;color: #b79d11;}
+.content p{padding-top: 40px;font-size: 17px;text-align: justify;}

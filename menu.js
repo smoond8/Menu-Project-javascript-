@@ -1,4 +1,4 @@
-const menu = [
+const menuarr = [
     {
       id: 1,
       title: "buttermilk pancakes",
@@ -52,7 +52,7 @@ const menu = [
       title: "bacon overflow",
       category: "breakfast",
       price: 8.99,
-      img: ".item-7.jpeg",
+      img: "item-7.jpeg",
       desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
     },
     {
@@ -73,10 +73,89 @@ const menu = [
     },
   ];
 
-  let picture=document.getElementById('image');
+  
   let item=document.getElementById('item');
   let price=document.getElementById('price');
   let itemContent=document.getElementById('item-content');
+  let allItem=document.getElementById('all');
+  let menuItem=document.getElementById('menu-item');
 
+  let all=document.getElementById('all');
+  let breakfast=document.getElementById('breakfast');
+  let lunch=document.getElementById('lunch');
+  let shakes=document.getElementById('shakes');
 
   
+  
+  window.addEventListener('DOMContentLoaded',()=>{
+    
+    displayMenuItems(menuarr);
+  })
+
+  all.addEventListener('click',(event)=>{
+    displayMenuItems(menuarr)
+  })
+  breakfast.addEventListener('click',(event)=>{
+    const currentItem=(event.currentTarget.id)
+    const menuCatogary=menuarr.filter((value)=>{
+
+      if(value.category===currentItem){
+        return value;
+      }
+    })
+      displayMenuItems(menuCatogary)
+   
+    
+  })
+
+  shakes.addEventListener('click',(event)=>{
+    const currentItem=(event.currentTarget.id)
+    const menuCatogary=menuarr.filter((value)=>{
+
+      if(value.category===currentItem){
+        return value;
+      }
+    })
+
+      displayMenuItems(menuCatogary)
+
+    
+  })
+
+  lunch.addEventListener('click',(event)=>{
+    const currentItem=(event.currentTarget.id)
+    const menuCatogary=menuarr.filter((value)=>{
+
+      if(value.category===currentItem){
+        return value;
+      }
+    })
+ 
+      displayMenuItems(menuCatogary)
+    
+  })
+
+
+
+
+  const displayMenuItems=(menuitems)=>{
+    let displayMenu=menuitems.map((arritem)=>{
+      
+      return `<div class="left-item">
+      <div class="pic">
+          <img src=${arritem.img} alt="item1" id="image">
+      </div>
+      <div class="content">
+          <header>
+          <h3 class="item" id="item">${arritem.title}</h3>
+          <h3 class="price" id="price"> ${arritem.price}</h3>
+          </header>
+          <p id="item-content">${arritem.desc}</p>
+      </div>
+      </div>`;
+    })
+    displayMenu=displayMenu.join("");
+    
+    
+    menuItem.innerHTML=displayMenu
+  }
