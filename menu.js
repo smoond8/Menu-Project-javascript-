@@ -96,48 +96,15 @@ const menuarr = [
   all.addEventListener('click',(event)=>{
     displayMenuItems(menuarr)
   })
-  breakfast.addEventListener('click',(event)=>{
-    const currentItem=(event.currentTarget.id)
-    const menuCatogary=menuarr.filter((value)=>{
 
-      if(value.category===currentItem){
-        return value;
-      }
-    })
-      displayMenuItems(menuCatogary)
+  const filterMenu = (category)=>{
+
+    console.log("helloo");
+    const menuCatogary=menuarr.filter((item)=>item.category===category);
+    displayMenuItems(menuCatogary)
    
     
-  })
-
-  shakes.addEventListener('click',(event)=>{
-    const currentItem=(event.currentTarget.id)
-    const menuCatogary=menuarr.filter((value)=>{
-
-      if(value.category===currentItem){
-        return value;
-      }
-    })
-
-      displayMenuItems(menuCatogary)
-
-    
-  })
-
-  lunch.addEventListener('click',(event)=>{
-    const currentItem=(event.currentTarget.id)
-    const menuCatogary=menuarr.filter((value)=>{
-
-      if(value.category===currentItem){
-        return value;
-      }
-    })
- 
-      displayMenuItems(menuCatogary)
-    
-  })
-
-
-
+  };
 
   const displayMenuItems=(menuitems)=>{
     let displayMenu=menuitems.map((arritem)=>{
